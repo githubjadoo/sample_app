@@ -38,4 +38,16 @@ describe "Static pages" do
        page.should have_selector('title',:text => "Ruby on Rails tutorial Sample App | About Us")
     end
   end
+  describe "Contact page" do
+    it "should have the h1 'Contact'" do
+      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
+      visit '/static_pages/contact'
+       page.should have_selector('h1',:text =>  'Contact')
+    end
+    it "should have the title 'Contact'" do
+      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
+      visit '/static_pages/contact'
+       page.should have_selector('title',:text => "Ruby on Rails tutorial Sample App | Contact")
+    end
+  end
 end
